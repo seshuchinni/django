@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import home,second
+from seshuapp.views import homes
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",home,name="home"),
     path("second/",second,name="second"),
+    path("homes/",homes,name="homes"),
 ]
